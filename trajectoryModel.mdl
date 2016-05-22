@@ -7,7 +7,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.57"
+    ComputedModelVersion    "1.66"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -29,7 +29,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [557.0, 119.0, 1227.0, 948.0]
+      Location		      [173.0, 38.0, 1523.0, 1140.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -53,9 +53,9 @@ Model {
 	IsActive		[1]
 	ViewObjType		"SimulinkTopLevel"
 	LoadSaveID		"0"
-	Extents			[1193.0, 778.0]
-	ZoomFactor		[0.83842538069363592]
-	Offset			[-260.31749036754707, -240.12511920173932]
+	Extents			[1489.0, 970.0]
+	ZoomFactor		[1.0]
+	Offset			[-279.73655000748033, -46.471999792041657]
       }
     }
   }
@@ -65,9 +65,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "eugene"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Sun May 22 15:12:27 2016"
-  RTWModifiedTimeStamp	  385827145
-  ModelVersionFormat	  "1.%<AutoIncrement:57>"
+  LastModifiedDate	  "Mon May 23 02:09:35 2016"
+  RTWModifiedTimeStamp	  385866538
+  ModelVersionFormat	  "1.%<AutoIncrement:66>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -825,6 +825,24 @@ Model {
       SampleTime	      "-1"
     }
     Block {
+      BlockType		      Inport
+      Port		      "1"
+      OutputFunctionCall      off
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchInputForFeedbackSignals off
+      Interpolate	      on
+    }
+    Block {
       BlockType		      Integrator
       ExternalReset	      "none"
       InitialConditionSource  "internal"
@@ -838,6 +856,23 @@ Model {
       IgnoreLimit	      off
       ZeroCross		      on
       ContinuousStateAttributes	"''"
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      SourceOfInitialOutputValue "Dialog"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
     }
     Block {
       BlockType		      Product
@@ -888,6 +923,37 @@ Model {
       Iterations	      "3"
     }
     Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      CheckFcnCallInpInsideContextMsg off
+      SystemSampleTime	      "-1"
+      RTWSystemCode	      "Auto"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      FunctionInterfaceSpec   "void_void"
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      DataTypeOverrideAppliesTo	"AllNumericTypes"
+      MinMaxOverflowLogging   "UseLocalSettings"
+      Opaque		      off
+      MaskHideContents	      off
+      SFBlockType	      "NONE"
+      Variant		      off
+      GeneratePreprocessorConditionals off
+      ContentPreviewEnabled   off
+    }
+    Block {
       BlockType		      Sum
       IconShape		      "rectangular"
       Inputs		      "++"
@@ -917,7 +983,7 @@ Model {
   }
   System {
     Name		    "trajectoryModel"
-    Location		    [557, 119, 1784, 1067]
+    Location		    [173, 38, 1696, 1178]
     Open		    on
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
@@ -929,22 +995,14 @@ Model {
     TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "84"
+    ZoomFactor		    "100"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "81"
-    Block {
-      BlockType		      Constant
-      Name		      "1"
-      SID		      "9"
-      Position		      [820, 355, 850, 385]
-      ZOrder		      9
-      BlockMirror	      on
-    }
+    SIDHighWatermark	    "112"
     Block {
       BlockType		      Constant
       Name		      "2"
       SID		      "12"
-      Position		      [530, 660, 560, 690]
+      Position		      [540, 645, 570, 675]
       ZOrder		      12
       BlockMirror	      on
     }
@@ -965,60 +1023,10 @@ Model {
       Name		      "Add1"
       SID		      "15"
       Ports		      [3, 1]
-      Position		      [455, 689, 485, 741]
+      Position		      [455, 649, 485, 701]
       ZOrder		      15
       BlockMirror	      on
       Inputs		      "--+"
-      InputSameDT	      off
-      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-      SaturateOnIntegerOverflow	off
-    }
-    Block {
-      BlockType		      Sum
-      Name		      "Add2"
-      SID		      "19"
-      Ports		      [2, 1]
-      Position		      [785, 237, 815, 268]
-      ZOrder		      19
-      BlockMirror	      on
-      InputSameDT	      off
-      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-      SaturateOnIntegerOverflow	off
-    }
-    Block {
-      BlockType		      Sum
-      Name		      "Add3"
-      SID		      "22"
-      Ports		      [2, 1]
-      Position		      [935, 202, 965, 233]
-      ZOrder		      22
-      BlockMirror	      on
-      Inputs		      "+-"
-      InputSameDT	      off
-      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-      SaturateOnIntegerOverflow	off
-    }
-    Block {
-      BlockType		      Sum
-      Name		      "Add4"
-      SID		      "24"
-      Ports		      [2, 1]
-      Position		      [825, 707, 855, 738]
-      ZOrder		      25
-      BlockMirror	      on
-      InputSameDT	      off
-      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-      SaturateOnIntegerOverflow	off
-    }
-    Block {
-      BlockType		      Sum
-      Name		      "Add5"
-      SID		      "25"
-      Ports		      [2, 1]
-      Position		      [975, 672, 1005, 703]
-      ZOrder		      28
-      BlockMirror	      on
-      Inputs		      "+-"
       InputSameDT	      off
       OutDataTypeStr	      "Inherit: Inherit via internal rule"
       SaturateOnIntegerOverflow	off
@@ -1075,7 +1083,7 @@ Model {
       Name		      "Bus\nCreator2"
       SID		      "77"
       Ports		      [2, 1]
-      Position		      [575, 18, 580, 62]
+      Position		      [615, 123, 620, 167]
       ZOrder		      65
       ShowName		      off
       Inputs		      "2"
@@ -1134,7 +1142,7 @@ Model {
       Name		      "Divide3"
       SID		      "30"
       Ports		      [3, 1]
-      Position		      [650, 716, 680, 774]
+      Position		      [625, 436, 655, 494]
       ZOrder		      30
       BlockMirror	      on
       Inputs		      "***"
@@ -1150,16 +1158,13 @@ Model {
       }
     }
     Block {
-      BlockType		      Gain
+      BlockType		      Constant
       Name		      "Earth_x"
-      SID		      "7"
-      Position		      [700, 460, 730, 490]
-      ZOrder		      7
+      SID		      "111"
+      Position		      [930, 255, 960, 285]
+      ZOrder		      70
       BlockMirror	      on
-      Gain		      "-1"
-      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
-      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-      SaturateOnIntegerOverflow	off
+      Value		      "-mu"
     }
     Block {
       BlockType		      Gain
@@ -1186,76 +1191,30 @@ Model {
       SaturateOnIntegerOverflow	off
     }
     Block {
-      BlockType		      Sum
-      Name		      "Moon_x\nEarth mass"
-      SID		      "8"
-      Ports		      [2, 1]
-      Position		      [700, 377, 730, 408]
-      ZOrder		      8
+      BlockType		      Constant
+      Name		      "Moon mass"
+      SID		      "110"
+      Position		      [930, 520, 960, 550]
+      ZOrder		      69
       BlockMirror	      on
-      InputSameDT	      off
-      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-      SaturateOnIntegerOverflow	off
+      Value		      "mu"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Moon_x\nEarth mass"
+      SID		      "112"
+      Position		      [930, 380, 960, 410]
+      ZOrder		      71
+      BlockMirror	      on
+      Value		      "1-mu"
     }
     Block {
       BlockType		      Product
       Name		      "Product"
       SID		      "17"
       Ports		      [2, 1]
-      Position		      [340, 692, 370, 723]
+      Position		      [340, 652, 370, 683]
       ZOrder		      17
-      BlockMirror	      on
-      InputSameDT	      off
-      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-      RndMeth		      "Floor"
-      SaturateOnIntegerOverflow	off
-    }
-    Block {
-      BlockType		      Product
-      Name		      "Product1"
-      SID		      "20"
-      Ports		      [2, 1]
-      Position		      [860, 212, 890, 243]
-      ZOrder		      20
-      BlockMirror	      on
-      InputSameDT	      off
-      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-      RndMeth		      "Floor"
-      SaturateOnIntegerOverflow	off
-    }
-    Block {
-      BlockType		      Product
-      Name		      "Product2"
-      SID		      "21"
-      Ports		      [2, 1]
-      Position		      [860, 267, 890, 298]
-      ZOrder		      21
-      BlockMirror	      on
-      InputSameDT	      off
-      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-      RndMeth		      "Floor"
-      SaturateOnIntegerOverflow	off
-    }
-    Block {
-      BlockType		      Product
-      Name		      "Product3"
-      SID		      "26"
-      Ports		      [2, 1]
-      Position		      [900, 682, 930, 713]
-      ZOrder		      26
-      BlockMirror	      on
-      InputSameDT	      off
-      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-      RndMeth		      "Floor"
-      SaturateOnIntegerOverflow	off
-    }
-    Block {
-      BlockType		      Product
-      Name		      "Product4"
-      SID		      "27"
-      Ports		      [2, 1]
-      Position		      [900, 737, 930, 768]
-      ZOrder		      27
       BlockMirror	      on
       InputSameDT	      off
       OutDataTypeStr	      "Inherit: Inherit via internal rule"
@@ -1302,34 +1261,6 @@ Model {
       SaturateOnIntegerOverflow	off
     }
     Block {
-      BlockType		      Sqrt
-      Name		      "Sqrt"
-      SID		      "18"
-      Position		      [725, 240, 755, 270]
-      ZOrder		      18
-      BlockMirror	      on
-      Port {
-	PortNumber		1
-	Name			"r1"
-	RTWStorageClass		"Auto"
-	DataLoggingNameMode	"SignalName"
-      }
-    }
-    Block {
-      BlockType		      Sqrt
-      Name		      "Sqrt1"
-      SID		      "28"
-      Position		      [765, 710, 795, 740]
-      ZOrder		      24
-      BlockMirror	      on
-      Port {
-	PortNumber		1
-	Name			"r2"
-	RTWStorageClass		"Auto"
-	DataLoggingNameMode	"SignalName"
-      }
-    }
-    Block {
       BlockType		      ToWorkspace
       Name		      "To Workspace"
       SID		      "38"
@@ -1360,78 +1291,458 @@ Model {
       }
     }
     Block {
-      BlockType		      Scope
-      Name		      "dx-dy scope"
-      SID		      "73"
-      Ports		      [1]
-      Position		      [565, 68, 595, 102]
-      ZOrder		      61
-      Floating		      off
-      Location		      [201, 480, 1188, 1193]
-      Open		      off
-      NumInputPorts	      "1"
-      List {
-	ListType		AxesTitles
-	axes1			"%<SignalLabel>"
+      BlockType		      Integrator
+      Name		      "dy"
+      SID		      "3"
+      Ports		      [1, 1]
+      Position		      [215, 590, 245, 620]
+      ZOrder		      3
+      InitialCondition	      "initialConditions(4)"
+      AbsoluteTolerance	      "1e-6"
+      Port {
+	PortNumber		1
+	Name			"y_dot"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
       }
-      List {
-	ListType		ScopeGraphics
-	FigureColor		"[0.501960784313725 0.501960784313725 0.501960784313725]"
-	AxesColor		"[0 0 0]"
-	AxesTickColor		"[1 1 1]"
-	LineColors		"[1 1 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]"
-	LineStyles		"-|-|-|-|-|-"
-	LineWidths		"[0.5 0.5 0.5 0.5 0.5 0.5]"
-	MarkerStyles		"none|none|none|none|none|none"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "r1"
+      SID		      "98"
+      Ports		      [3, 1]
+      Position		      [720, 284, 820, 326]
+      ZOrder		      67
+      BlockMirror	      on
+      RequestExecContextInheritance off
+      Port {
+	PortNumber		1
+	Name			"r1"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
       }
-      ShowLegends	      on
-      LegendLocations	      "0.87298     0.92076    0.067338    0.031557"
-      TimeRange		      "23"
-      SaveName		      "ScopeData1"
-      LimitDataPoints	      off
-      ScrollMode	      off
+      System {
+	Name			"r1"
+	Location		[134, 60, 1657, 1200]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "x"
+	  SID			  "99"
+	  Position		  [200, 208, 230, 222]
+	  ZOrder		  -1
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "y"
+	  SID			  "100"
+	  Position		  [200, 338, 230, 352]
+	  ZOrder		  1
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Planet_x"
+	  SID			  "101"
+	  Position		  [200, 248, 230, 262]
+	  ZOrder		  34
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "(x-Planet_x)^2"
+	  SID			  "102"
+	  Ports			  [2, 1]
+	  Position		  [385, 227, 415, 258]
+	  ZOrder		  37
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "(x-Planet_x)^2+y^2"
+	  SID			  "103"
+	  Ports			  [2, 1]
+	  Position		  [525, 282, 555, 313]
+	  ZOrder		  38
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sqrt
+	  Name			  "Sqrt"
+	  SID			  "104"
+	  Position		  [620, 285, 650, 315]
+	  ZOrder		  39
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "x-Planet_x"
+	  SID			  "105"
+	  Ports			  [2, 1]
+	  Position		  [275, 222, 305, 253]
+	  ZOrder		  35
+	  Inputs		  "+-"
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "y^2"
+	  SID			  "106"
+	  Ports			  [2, 1]
+	  Position		  [390, 327, 420, 358]
+	  ZOrder		  36
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Out1"
+	  SID			  "107"
+	  Position		  [710, 293, 740, 307]
+	  ZOrder		  -2
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  ZOrder		  1
+	  SrcBlock		  "x"
+	  SrcPort		  1
+	  Points		  [26, 0; 0, 15]
+	  DstBlock		  "x-Planet_x"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  2
+	  SrcBlock		  "Planet_x"
+	  SrcPort		  1
+	  Points		  [25, 0]
+	  DstBlock		  "x-Planet_x"
+	  DstPort		  2
+	}
+	Line {
+	  ZOrder		  3
+	  SrcBlock		  "y"
+	  SrcPort		  1
+	  Points		  [140, 0]
+	  Branch {
+	    ZOrder		    4
+	    DstBlock		    "y^2"
+	    DstPort		    1
+	  }
+	  Branch {
+	    ZOrder		    5
+	    DstBlock		    "y^2"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  ZOrder		  6
+	  SrcBlock		  "x-Planet_x"
+	  SrcPort		  1
+	  Points		  [35, 0]
+	  Branch {
+	    ZOrder		    7
+	    Points		    [0, -5]
+	    DstBlock		    "(x-Planet_x)^2"
+	    DstPort		    1
+	  }
+	  Branch {
+	    ZOrder		    8
+	    Points		    [0, 10]
+	    DstBlock		    "(x-Planet_x)^2"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  ZOrder		  9
+	  SrcBlock		  "y^2"
+	  SrcPort		  1
+	  Points		  [30, 0; 0, -40]
+	  DstBlock		  "(x-Planet_x)^2+y^2"
+	  DstPort		  2
+	}
+	Line {
+	  ZOrder		  10
+	  SrcBlock		  "(x-Planet_x)^2"
+	  SrcPort		  1
+	  Points		  [65, 0; 0, 45]
+	  DstBlock		  "(x-Planet_x)^2+y^2"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  11
+	  SrcBlock		  "(x-Planet_x)^2+y^2"
+	  SrcPort		  1
+	  DstBlock		  "Sqrt"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  12
+	  SrcBlock		  "Sqrt"
+	  SrcPort		  1
+	  DstBlock		  "Out1"
+	  DstPort		  1
+	}
+	Annotation {
+	  SID			  "108"
+	  Name			  " "
+	  Position		  [18, 17, 22, 29]
+	  InternalMargins	  [0, 0, 0, 0]
+	  FixedHeight		  off
+	  FixedWidth		  off
+	  HorizontalAlignment	  "left"
+	  VerticalAlignment	  "top"
+	  ZOrder		  -1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "r2"
+      SID		      "82"
+      Ports		      [3, 1]
+      Position		      [740, 444, 840, 486]
+      ZOrder		      66
+      BlockMirror	      on
+      RequestExecContextInheritance off
+      Port {
+	PortNumber		1
+	Name			"r2"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      System {
+	Name			"r2"
+	Location		[134, 60, 1657, 1200]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "x"
+	  SID			  "83"
+	  Position		  [200, 208, 230, 222]
+	  ZOrder		  -1
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "y"
+	  SID			  "85"
+	  Position		  [200, 338, 230, 352]
+	  ZOrder		  1
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Planet_x"
+	  SID			  "92"
+	  Position		  [200, 248, 230, 262]
+	  ZOrder		  34
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "(x-Planet_x)^2"
+	  SID			  "95"
+	  Ports			  [2, 1]
+	  Position		  [385, 227, 415, 258]
+	  ZOrder		  37
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "(x-Planet_x)^2+y^2"
+	  SID			  "96"
+	  Ports			  [2, 1]
+	  Position		  [525, 282, 555, 313]
+	  ZOrder		  38
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sqrt
+	  Name			  "Sqrt"
+	  SID			  "97"
+	  Position		  [620, 285, 650, 315]
+	  ZOrder		  39
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "x-Planet_x"
+	  SID			  "93"
+	  Ports			  [2, 1]
+	  Position		  [275, 222, 305, 253]
+	  ZOrder		  35
+	  Inputs		  "+-"
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "y^2"
+	  SID			  "94"
+	  Ports			  [2, 1]
+	  Position		  [390, 327, 420, 358]
+	  ZOrder		  36
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Out1"
+	  SID			  "84"
+	  Position		  [710, 293, 740, 307]
+	  ZOrder		  -2
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  ZOrder		  20
+	  SrcBlock		  "x"
+	  SrcPort		  1
+	  Points		  [26, 0; 0, 15]
+	  DstBlock		  "x-Planet_x"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  21
+	  SrcBlock		  "Planet_x"
+	  SrcPort		  1
+	  Points		  [25, 0]
+	  DstBlock		  "x-Planet_x"
+	  DstPort		  2
+	}
+	Line {
+	  ZOrder		  22
+	  SrcBlock		  "y"
+	  SrcPort		  1
+	  Points		  [140, 0]
+	  Branch {
+	    ZOrder		    24
+	    DstBlock		    "y^2"
+	    DstPort		    1
+	  }
+	  Branch {
+	    ZOrder		    23
+	    DstBlock		    "y^2"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  ZOrder		  25
+	  SrcBlock		  "x-Planet_x"
+	  SrcPort		  1
+	  Points		  [35, 0]
+	  Branch {
+	    ZOrder		    28
+	    Points		    [0, -5]
+	    DstBlock		    "(x-Planet_x)^2"
+	    DstPort		    1
+	  }
+	  Branch {
+	    ZOrder		    27
+	    Points		    [0, 10]
+	    DstBlock		    "(x-Planet_x)^2"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  ZOrder		  29
+	  SrcBlock		  "y^2"
+	  SrcPort		  1
+	  Points		  [30, 0; 0, -40]
+	  DstBlock		  "(x-Planet_x)^2+y^2"
+	  DstPort		  2
+	}
+	Line {
+	  ZOrder		  30
+	  SrcBlock		  "(x-Planet_x)^2"
+	  SrcPort		  1
+	  Points		  [65, 0; 0, 45]
+	  DstBlock		  "(x-Planet_x)^2+y^2"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  31
+	  SrcBlock		  "(x-Planet_x)^2+y^2"
+	  SrcPort		  1
+	  DstBlock		  "Sqrt"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  32
+	  SrcBlock		  "Sqrt"
+	  SrcPort		  1
+	  DstBlock		  "Out1"
+	  DstPort		  1
+	}
+	Annotation {
+	  SID			  "91"
+	  Name			  " "
+	  Position		  [18, 17, 23, 29]
+	  InternalMargins	  [0, 0, 0, 0]
+	  FixedHeight		  off
+	  FixedWidth		  off
+	  HorizontalAlignment	  "left"
+	  VerticalAlignment	  "top"
+	}
+      }
+    }
+    Block {
+      BlockType		      Integrator
+      Name		      "x"
+      SID		      "2"
+      Ports		      [1, 1]
+      Position		      [345, 240, 375, 270]
+      ZOrder		      2
+      InitialCondition	      "initialConditions(1)"
+      AbsoluteTolerance	      "1e-6"
     }
     Block {
       BlockType		      Scope
-      Name		      "dx-dy scope1"
-      SID		      "75"
-      Ports		      [2]
-      Position		      [650, 95, 680, 130]
-      ZOrder		      63
-      Floating		      off
-      Location		      [188, 365, 1175, 1078]
-      Open		      off
-      NumInputPorts	      "2"
-      List {
-	ListType		AxesTitles
-	axes1			"%<SignalLabel>"
-	axes2			"%<SignalLabel>"
-      }
-      List {
-	ListType		ScopeGraphics
-	FigureColor		"[0.501960784313725 0.501960784313725 0.501960784313725]"
-	AxesColor		"[0 0 0]"
-	AxesTickColor		"[1 1 1]"
-	LineColors		"[1 1 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]"
-	LineStyles		"-|-|-|-|-|-"
-	LineWidths		"[0.5 0.5 0.5 0.5 0.5 0.5]"
-	MarkerStyles		"none|none|none|none|none|none"
-      }
-      ShowLegends	      on
-      LegendLocations	      " 0.8972     0.92076    0.067338    0.031557\n0.91692      0.4467    0.047619    0.031557"
-      TimeRange		      "23"
-      YMin		      "-5~-5"
-      YMax		      "5~5"
-      SaveName		      "ScopeData2"
-      LimitDataPoints	      off
-      ScrollMode	      off
-    }
-    Block {
-      BlockType		      Scope
-      Name		      "dx-dy scope2"
+      Name		      "x-y-dx-dy"
       SID		      "76"
       Ports		      [1]
-      Position		      [650, 22, 680, 58]
+      Position		      [650, 127, 680, 163]
       ZOrder		      64
       Floating		      off
       Location		      [188, 365, 1175, 1078]
@@ -1455,72 +1766,6 @@ Model {
       LegendLocations	      "0.8972     0.89411    0.067338    0.058205"
       TimeRange		      "23"
       SaveName		      "ScopeData3"
-      LimitDataPoints	      off
-      ScrollMode	      off
-    }
-    Block {
-      BlockType		      Integrator
-      Name		      "dy"
-      SID		      "3"
-      Ports		      [1, 1]
-      Position		      [215, 590, 245, 620]
-      ZOrder		      3
-      InitialCondition	      "initialConditions(4)"
-      AbsoluteTolerance	      "1e-6"
-      Port {
-	PortNumber		1
-	Name			"y_dot"
-	RTWStorageClass		"Auto"
-	DataLoggingNameMode	"SignalName"
-      }
-    }
-    Block {
-      BlockType		      Constant
-      Name		      "mu"
-      SID		      "5"
-      Position		      [820, 460, 850, 490]
-      ZOrder		      5
-      BlockMirror	      on
-      Value		      "mu"
-    }
-    Block {
-      BlockType		      Integrator
-      Name		      "x"
-      SID		      "2"
-      Ports		      [1, 1]
-      Position		      [345, 240, 375, 270]
-      ZOrder		      2
-      InitialCondition	      "initialConditions(1)"
-      AbsoluteTolerance	      "1e-6"
-    }
-    Block {
-      BlockType		      Scope
-      Name		      "x-y scope"
-      SID		      "72"
-      Ports		      [1]
-      Position		      [565, 128, 595, 162]
-      ZOrder		      60
-      Floating		      off
-      Location		      [517, 111, 1504, 824]
-      Open		      off
-      NumInputPorts	      "1"
-      List {
-	ListType		AxesTitles
-	axes1			"%<SignalLabel>"
-      }
-      List {
-	ListType		ScopeGraphics
-	FigureColor		"[0.5 0.5 0.5]"
-	AxesColor		"[0 0 0]"
-	AxesTickColor		"[1 1 1]"
-	LineColors		"[1 1 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]"
-	LineStyles		"-|-|-|-|-|-"
-	LineWidths		"[0.5 0.5 0.5 0.5 0.5 0.5]"
-	MarkerStyles		"none|none|none|none|none|none"
-      }
-      ShowLegends	      on
-      LegendLocations	      "0.87298     0.92076    0.047619    0.031557"
-      TimeRange		      "23"
       LimitDataPoints	      off
       ScrollMode	      off
     }
@@ -1588,57 +1833,22 @@ Model {
       }
     }
     Line {
-      ZOrder		      6
-      SrcBlock		      "mu"
-      SrcPort		      1
-      Points		      [-35, 0]
-      Branch {
-	ZOrder			142
-	Points			[0, 44; -205, 0]
-	DstBlock		"Divide"
-	DstPort			1
-      }
-      Branch {
-	ZOrder			141
-	DstBlock		"Earth_x"
-	DstPort			1
-      }
-    }
-    Line {
-      ZOrder		      7
+      ZOrder		      416
       SrcBlock		      "Earth_x"
       SrcPort		      1
-      Points		      [-9, 0]
+      Points		      [-77, 0]
       Branch {
-	ZOrder			132
-	Points			[0, -11; -282, 0; 0, -154]
+	ZOrder			430
+	Points			[0, -2; -444, 0; 0, 42]
 	DstBlock		"Product6"
 	DstPort			1
       }
       Branch {
-	ZOrder			103
-	Points			[0, 63; 178, 0; 0, -38]
-	Branch {
-	  ZOrder		  48
-	  Points		  [116, 0]
-	  DstBlock		  "Add3"
-	  DstPort		  2
-	}
-	Branch {
-	  ZOrder		  47
-	  Points		  [0, -100]
-	  DstBlock		  "Moon_x\nEarth mass"
-	  DstPort		  2
-	}
+	ZOrder			424
+	Points			[0, 50]
+	DstBlock		"r1"
+	DstPort			3
       }
-    }
-    Line {
-      ZOrder		      8
-      SrcBlock		      "1"
-      SrcPort		      1
-      Points		      [-40, 0; 0, 15]
-      DstBlock		      "Moon_x\nEarth mass"
-      DstPort		      1
     }
     Line {
       ZOrder		      16
@@ -1649,13 +1859,13 @@ Model {
       DstPort		      1
     }
     Line {
-      ZOrder		      22
+      ZOrder		      417
       SrcBlock		      "Moon_x\nEarth mass"
       SrcPort		      1
-      Points		      [-35, 0]
+      Points		      [-30, 0]
       Branch {
-	ZOrder			140
-	Points			[-54, 0]
+	ZOrder			425
+	Points			[-289, 0]
 	Branch {
 	  ZOrder		  139
 	  DstBlock		  "Divide1"
@@ -1669,17 +1879,17 @@ Model {
 	}
       }
       Branch {
-	ZOrder			64
-	Points			[0, 210; 390, 0; 0, 90]
-	DstBlock		"Add5"
-	DstPort			2
+	ZOrder			398
+	Points			[0, 85]
+	DstBlock		"r2"
+	DstPort			3
       }
     }
     Line {
       ZOrder		      27
       SrcBlock		      "2"
       SrcPort		      1
-      Points		      [-3, 0; 0, 55]
+      Points		      [-8, 0; 0, 30]
       DstBlock		      "Add1"
       DstPort		      3
     }
@@ -1696,7 +1906,7 @@ Model {
       }
       Branch {
 	ZOrder			101
-	Points			[-10, 0; 0, 170]
+	Points			[-10, 0; 0, 130]
 	DstBlock		"Add1"
 	DstPort			2
       }
@@ -1714,7 +1924,7 @@ Model {
       }
       Branch {
 	ZOrder			99
-	Points			[-17, 0; 0, 295]
+	Points			[-17, 0; 0, 255]
 	DstBlock		"Add1"
 	DstPort			1
       }
@@ -1725,53 +1935,34 @@ Model {
       SrcPort		      1
       Points		      [20, 0]
       Branch {
-	ZOrder			117
-	Points			[18, 0; 0, -380]
-	DstBlock		"Bus\nCreator"
-	DstPort			2
+	ZOrder			442
+	Points			[0, 55]
+	DstBlock		"Product"
+	DstPort			1
       }
       Branch {
-	ZOrder			115
-	Points			[0, 44]
+	ZOrder			433
+	Points			[18, 0]
 	Branch {
 	  ZOrder		  40
-	  Points		  [506, 0]
+	  Points		  [447, 0; 0, -140]
 	  Branch {
-	    ZOrder		    58
-	    Points		    [158, 0; 0, 111; -113, 0]
-	    Branch {
-	      ZOrder		      61
-	      Points		      [0, -15]
-	      DstBlock		      "Product4"
-	      DstPort		      1
-	    }
-	    Branch {
-	      ZOrder		      60
-	      DstBlock		      "Product4"
-	      DstPort		      2
-	    }
+	    ZOrder		    426
+	    DstBlock		    "r2"
+	    DstPort		    2
 	  }
 	  Branch {
 	    ZOrder		    57
-	    Points		    [0, -359]
-	    Branch {
-	      ZOrder		      42
-	      Points		      [0, -15]
-	      DstBlock		      "Product2"
-	      DstPort		      1
-	    }
-	    Branch {
-	      ZOrder		      41
-	      DstBlock		      "Product2"
-	      DstPort		      2
-	    }
+	    Points		    [0, -160]
+	    DstBlock		    "r1"
+	    DstPort		    2
 	  }
 	}
 	Branch {
-	  ZOrder		  39
-	  Points		  [0, 51]
-	  DstBlock		  "Product"
-	  DstPort		  1
+	  ZOrder		  117
+	  Points		  [0, -380]
+	  DstBlock		  "Bus\nCreator"
+	  DstPort		  2
 	}
       }
     }
@@ -1782,7 +1973,7 @@ Model {
       Points		      [-18, 0]
       Branch {
 	ZOrder			92
-	Points			[0, -295]
+	Points			[0, -255]
 	DstBlock		"Product5"
 	DstPort			2
       }
@@ -1808,85 +1999,6 @@ Model {
       DstPort		      1
     }
     Line {
-      ZOrder		      36
-      SrcBlock		      "Add2"
-      SrcPort		      1
-      DstBlock		      "Sqrt"
-      DstPort		      1
-    }
-    Line {
-      ZOrder		      37
-      SrcBlock		      "Product2"
-      SrcPort		      1
-      Points		      [-17, 0; 0, -25]
-      DstBlock		      "Add2"
-      DstPort		      2
-    }
-    Line {
-      ZOrder		      38
-      SrcBlock		      "Product1"
-      SrcPort		      1
-      Points		      [-17, 0; 0, 15]
-      DstBlock		      "Add2"
-      DstPort		      1
-    }
-    Line {
-      ZOrder		      44
-      SrcBlock		      "Add3"
-      SrcPort		      1
-      Points		      [-25, 0]
-      Branch {
-	ZOrder			46
-	DstBlock		"Product1"
-	DstPort			2
-      }
-      Branch {
-	ZOrder			45
-	DstBlock		"Product1"
-	DstPort			1
-      }
-    }
-    Line {
-      ZOrder		      51
-      SrcBlock		      "Add4"
-      SrcPort		      1
-      DstBlock		      "Sqrt1"
-      DstPort		      1
-    }
-    Line {
-      ZOrder		      52
-      SrcBlock		      "Product3"
-      SrcPort		      1
-      Points		      [-17, 0; 0, 15]
-      DstBlock		      "Add4"
-      DstPort		      1
-    }
-    Line {
-      ZOrder		      53
-      SrcBlock		      "Product4"
-      SrcPort		      1
-      Points		      [-17, 0; 0, -25]
-      DstBlock		      "Add4"
-      DstPort		      2
-    }
-    Line {
-      ZOrder		      54
-      SrcBlock		      "Add5"
-      SrcPort		      1
-      Points		      [-24, 0]
-      Branch {
-	ZOrder			56
-	Points			[0, 15]
-	DstBlock		"Product3"
-	DstPort			2
-      }
-      Branch {
-	ZOrder			55
-	DstBlock		"Product3"
-	DstPort			1
-      }
-    }
-    Line {
       ZOrder		      50
       SrcBlock		      "x"
       SrcPort		      1
@@ -1908,17 +2020,16 @@ Model {
 	}
 	Branch {
 	  ZOrder		  111
-	  Points		  [78, 0; 0, -71; 471, 0; 0, 11]
+	  Points		  [78, 0; 0, -71; 357, 0; 0, 106]
 	  Branch {
-	    ZOrder		    67
-	    Points		    [36, 0; 0, 485]
-	    DstBlock		    "Add5"
+	    ZOrder		    414
+	    Points		    [0, 160]
+	    DstBlock		    "r2"
 	    DstPort		    1
 	  }
 	  Branch {
-	    ZOrder		    66
-	    Points		    [0, 15]
-	    DstBlock		    "Add3"
+	    ZOrder		    408
+	    DstBlock		    "r1"
 	    DstPort		    1
 	  }
 	}
@@ -1926,11 +2037,11 @@ Model {
     }
     Line {
       Name		      "r1"
-      ZOrder		      75
-      Labels		      [0, 0]
-      SrcBlock		      "Sqrt"
+      ZOrder		      413
+      Labels		      [-1, 0]
+      SrcBlock		      "r1"
       SrcPort		      1
-      Points		      [-32, 0; 0, 50; -23, 0]
+      Points		      [-50, 0]
       Branch {
 	ZOrder			77
 	Points			[0, 20]
@@ -1962,40 +2073,12 @@ Model {
       DstPort		      2
     }
     Line {
-      Name		      "r2"
-      ZOrder		      82
-      Labels		      [1, 1]
-      SrcBlock		      "Sqrt1"
-      SrcPort		      1
-      Points		      [-59, 0]
-      Branch {
-	ZOrder			84
-	Points			[0, 20]
-	Branch {
-	  ZOrder		  86
-	  Points		  [0, 20]
-	  DstBlock		  "Divide3"
-	  DstPort		  3
-	}
-	Branch {
-	  ZOrder		  85
-	  DstBlock		  "Divide3"
-	  DstPort		  2
-	}
-      }
-      Branch {
-	ZOrder			83
-	DstBlock		"Divide3"
-	DstPort			1
-      }
-    }
-    Line {
       Name		      "r2^3"
       ZOrder		      87
       Labels		      [1, 1]
       SrcBlock		      "Divide3"
       SrcPort		      1
-      Points		      [-35, 0; 0, -195]
+      Points		      [-27, 0; 0, 85]
       DstBlock		      "Divide"
       DstPort		      2
     }
@@ -2058,62 +2141,60 @@ Model {
       }
       Branch {
 	ZOrder			290
-	Points			[0, -70; 18, 0]
-	Branch {
-	  ZOrder		  320
-	  Points		  [0, -95]
-	  DstBlock		  "Bus\nCreator2"
-	  DstPort		  2
-	}
-	Branch {
-	  ZOrder		  319
-	  Points		  [20, 0]
-	  Branch {
-	    ZOrder		    316
-	    Points		    [0, 33; 75, 0; 0, -58]
-	    DstBlock		    "dx-dy scope1"
-	    DstPort		    2
-	  }
-	  Branch {
-	    ZOrder		    315
-	    DstBlock		    "x-y scope"
-	    DstPort		    1
-	  }
-	}
+	Points			[0, -60]
+	DstBlock		"Bus\nCreator2"
+	DstPort			2
       }
     }
     Line {
       ZOrder		      299
       SrcBlock		      "Bus\nCreator1"
       SrcPort		      1
-      Points		      [8, 0; 0, -80; 19, 0]
-      Branch {
-	ZOrder			322
-	Points			[0, -55]
-	DstBlock		"Bus\nCreator2"
-	DstPort			1
-      }
-      Branch {
-	ZOrder			321
-	Points			[30, 0]
-	Branch {
-	  ZOrder		  314
-	  Points		  [0, 35; 64, 0; 0, -15]
-	  DstBlock		  "dx-dy scope1"
-	  DstPort		  1
-	}
-	Branch {
-	  ZOrder		  313
-	  DstBlock		  "dx-dy scope"
-	  DstPort		  1
-	}
-      }
+      Points		      [8, 0; 0, -30]
+      DstBlock		      "Bus\nCreator2"
+      DstPort		      1
     }
     Line {
       ZOrder		      318
       SrcBlock		      "Bus\nCreator2"
       SrcPort		      1
-      DstBlock		      "dx-dy scope2"
+      DstBlock		      "x-y-dx-dy"
+      DstPort		      1
+    }
+    Line {
+      Name		      "r2"
+      ZOrder		      400
+      Labels		      [1, 1]
+      SrcBlock		      "r2"
+      SrcPort		      1
+      Points		      [-37, 0]
+      Branch {
+	ZOrder			406
+	Points			[0, 20]
+	DstBlock		"Divide3"
+	DstPort			3
+      }
+      Branch {
+	ZOrder			402
+	Points			[-1, 0]
+	Branch {
+	  ZOrder		  405
+	  Points		  [0, -20]
+	  DstBlock		  "Divide3"
+	  DstPort		  1
+	}
+	Branch {
+	  ZOrder		  404
+	  DstBlock		  "Divide3"
+	  DstPort		  2
+	}
+      }
+    }
+    Line {
+      ZOrder		      419
+      SrcBlock		      "Moon mass"
+      SrcPort		      1
+      DstBlock		      "Divide"
       DstPort		      1
     }
   }
