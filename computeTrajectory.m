@@ -47,7 +47,7 @@ plot_x = plot_points(1,:); % x-coordinates
 plot_y = plot_points(2,:); % y-coordinates
 dotScaling = [30,10]; % planets' scaling factor
 
-% equilibria points
+% equilibrium points
 % L1, L2, L3, L4, L5
 Lx = [0.83629259089993, 1.15616816590553, -1.00511551160689, 0.487722529, 0.487722529]; 
 Ly = [0, 0, 0, 0.86602540378444, -0.86602540378444]; 
@@ -76,4 +76,4 @@ descr = {['x_0 = ' num2str(initialConditions(1))];
 text(.025,0.8,descr,'FontSize',12);
 
 % save the plot to a file
-%print(fig1,'r3bp','-dpng','-r1200','-noui');
+%print(fig1,'img/r3bp','-dpng','-r1200','-noui');
