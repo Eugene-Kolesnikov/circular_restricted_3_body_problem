@@ -7,7 +7,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.35"
+    ComputedModelVersion    "1.57"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -29,7 +29,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [909.0, 72.0, 1008.0, 948.0]
+      Location		      [557.0, 119.0, 1227.0, 948.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -38,7 +38,7 @@ Model {
 	DockPosition		"Left"
 	Width			[50]
 	Height			[50]
-	Filter			[8]
+	Filter			[9]
       }
       Object {
 	$PropName		"ExplorerBarInfo"
@@ -53,9 +53,9 @@ Model {
 	IsActive		[1]
 	ViewObjType		"SimulinkTopLevel"
 	LoadSaveID		"0"
-	Extents			[974.0, 800.0]
-	ZoomFactor		[0.94979919678714853]
-	Offset			[76.41860465116298, -183.33298097251577]
+	Extents			[1193.0, 778.0]
+	ZoomFactor		[0.83842538069363592]
+	Offset			[-260.31749036754707, -240.12511920173932]
       }
     }
   }
@@ -65,9 +65,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "eugene"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Sat May 21 15:26:27 2016"
-  RTWModifiedTimeStamp	  385741585
-  ModelVersionFormat	  "1.%<AutoIncrement:35>"
+  LastModifiedDate	  "Sun May 22 15:12:27 2016"
+  RTWModifiedTimeStamp	  385827145
+  ModelVersionFormat	  "1.%<AutoIncrement:57>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -111,7 +111,7 @@ Model {
     $ObjectID		    6
     $ClassName		    "Simulink.SimulationData.ModelLoggingInfo"
     model_		    "trajectoryModel"
-    overrideMode_	    [0U]
+    overrideMode_	    [0.0]
     Array {
       Type		      "Cell"
       Dimension		      1
@@ -855,6 +855,24 @@ Model {
       SampleTime	      "-1"
     }
     Block {
+      BlockType		      Scope
+      ModelBased	      off
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      Grid		      "on"
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData"
+      DataFormat	      "Array"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "-1"
+    }
+    Block {
       BlockType		      Sqrt
       Operator		      "sqrt"
       OutputSignalType	      "auto"
@@ -899,7 +917,7 @@ Model {
   }
   System {
     Name		    "trajectoryModel"
-    Location		    [909, 72, 1917, 1020]
+    Location		    [557, 119, 1784, 1067]
     Open		    on
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
@@ -911,14 +929,14 @@ Model {
     TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "95"
+    ZoomFactor		    "84"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "42"
+    SIDHighWatermark	    "81"
     Block {
       BlockType		      Constant
       Name		      "1"
       SID		      "9"
-      Position		      [820, 190, 850, 220]
+      Position		      [820, 355, 850, 385]
       ZOrder		      9
       BlockMirror	      on
     }
@@ -926,7 +944,7 @@ Model {
       BlockType		      Constant
       Name		      "2"
       SID		      "12"
-      Position		      [530, 495, 560, 525]
+      Position		      [530, 660, 560, 690]
       ZOrder		      12
       BlockMirror	      on
     }
@@ -935,7 +953,7 @@ Model {
       Name		      "Add"
       SID		      "10"
       Ports		      [2, 1]
-      Position		      [105, 422, 135, 453]
+      Position		      [105, 587, 135, 618]
       ZOrder		      10
       Inputs		      "-+"
       InputSameDT	      off
@@ -947,7 +965,7 @@ Model {
       Name		      "Add1"
       SID		      "15"
       Ports		      [3, 1]
-      Position		      [455, 524, 485, 576]
+      Position		      [455, 689, 485, 741]
       ZOrder		      15
       BlockMirror	      on
       Inputs		      "--+"
@@ -960,7 +978,7 @@ Model {
       Name		      "Add2"
       SID		      "19"
       Ports		      [2, 1]
-      Position		      [785, 72, 815, 103]
+      Position		      [785, 237, 815, 268]
       ZOrder		      19
       BlockMirror	      on
       InputSameDT	      off
@@ -972,7 +990,7 @@ Model {
       Name		      "Add3"
       SID		      "22"
       Ports		      [2, 1]
-      Position		      [935, 37, 965, 68]
+      Position		      [935, 202, 965, 233]
       ZOrder		      22
       BlockMirror	      on
       Inputs		      "+-"
@@ -985,7 +1003,7 @@ Model {
       Name		      "Add4"
       SID		      "24"
       Ports		      [2, 1]
-      Position		      [825, 542, 855, 573]
+      Position		      [825, 707, 855, 738]
       ZOrder		      25
       BlockMirror	      on
       InputSameDT	      off
@@ -997,7 +1015,7 @@ Model {
       Name		      "Add5"
       SID		      "25"
       Ports		      [2, 1]
-      Position		      [975, 507, 1005, 538]
+      Position		      [975, 672, 1005, 703]
       ZOrder		      28
       BlockMirror	      on
       Inputs		      "+-"
@@ -1010,7 +1028,7 @@ Model {
       Name		      "Add6"
       SID		      "33"
       Ports		      [3, 1]
-      Position		      [105, 224, 135, 276]
+      Position		      [105, 389, 135, 441]
       ZOrder		      33
       BlockMirror	      on
       Inputs		      "+++"
@@ -1023,7 +1041,7 @@ Model {
       Name		      "Add7"
       SID		      "36"
       Ports		      [2, 1]
-      Position		      [250, 157, 280, 188]
+      Position		      [250, 322, 280, 353]
       ZOrder		      36
       BlockMirror	      on
       InputSameDT	      off
@@ -1035,8 +1053,30 @@ Model {
       Name		      "Bus\nCreator"
       SID		      "39"
       Ports		      [2, 1]
-      Position		      [480, 31, 485, 69]
+      Position		      [480, 196, 485, 234]
       ZOrder		      39
+      ShowName		      off
+      Inputs		      "2"
+      DisplayOption	      "bar"
+    }
+    Block {
+      BlockType		      BusCreator
+      Name		      "Bus\nCreator1"
+      SID		      "74"
+      Ports		      [2, 1]
+      Position		      [480, 143, 485, 187]
+      ZOrder		      62
+      ShowName		      off
+      Inputs		      "2"
+      DisplayOption	      "bar"
+    }
+    Block {
+      BlockType		      BusCreator
+      Name		      "Bus\nCreator2"
+      SID		      "77"
+      Ports		      [2, 1]
+      Position		      [575, 18, 580, 62]
+      ZOrder		      65
       ShowName		      off
       Inputs		      "2"
       DisplayOption	      "bar"
@@ -1046,7 +1086,7 @@ Model {
       Name		      "Divide"
       SID		      "13"
       Ports		      [2, 1]
-      Position		      [530, 362, 560, 393]
+      Position		      [530, 527, 560, 558]
       ZOrder		      13
       BlockMirror	      on
       Inputs		      "*/"
@@ -1060,7 +1100,7 @@ Model {
       Name		      "Divide1"
       SID		      "14"
       Ports		      [2, 1]
-      Position		      [530, 222, 560, 253]
+      Position		      [530, 387, 560, 418]
       ZOrder		      14
       BlockMirror	      on
       Inputs		      "*/"
@@ -1074,7 +1114,7 @@ Model {
       Name		      "Divide2"
       SID		      "29"
       Ports		      [3, 1]
-      Position		      [620, 131, 650, 189]
+      Position		      [620, 296, 650, 354]
       ZOrder		      29
       BlockMirror	      on
       Inputs		      "***"
@@ -1094,7 +1134,7 @@ Model {
       Name		      "Divide3"
       SID		      "30"
       Ports		      [3, 1]
-      Position		      [650, 551, 680, 609]
+      Position		      [650, 716, 680, 774]
       ZOrder		      30
       BlockMirror	      on
       Inputs		      "***"
@@ -1113,7 +1153,7 @@ Model {
       BlockType		      Gain
       Name		      "Earth_x"
       SID		      "7"
-      Position		      [700, 295, 730, 325]
+      Position		      [700, 460, 730, 490]
       ZOrder		      7
       BlockMirror	      on
       Gain		      "-1"
@@ -1125,7 +1165,7 @@ Model {
       BlockType		      Gain
       Name		      "Gain"
       SID		      "11"
-      Position		      [105, 365, 135, 395]
+      Position		      [105, 530, 135, 560]
       ZOrder		      11
       BlockMirror	      on
       Gain		      "2"
@@ -1137,7 +1177,7 @@ Model {
       BlockType		      Gain
       Name		      "Gain1"
       SID		      "32"
-      Position		      [250, 280, 280, 310]
+      Position		      [250, 445, 280, 475]
       ZOrder		      32
       BlockMirror	      on
       Gain		      "2"
@@ -1146,63 +1186,11 @@ Model {
       SaturateOnIntegerOverflow	off
     }
     Block {
-      BlockType		      Integrator
-      Name		      "Integrator"
-      SID		      "1"
-      Ports		      [1, 1]
-      Position		      [215, 75, 245, 105]
-      ZOrder		      1
-      InitialCondition	      "initialConditions(2)"
-      AbsoluteTolerance	      "1e-6"
-      Port {
-	PortNumber		1
-	Name			"x_dot"
-	RTWStorageClass		"Auto"
-	DataLoggingNameMode	"SignalName"
-      }
-    }
-    Block {
-      BlockType		      Integrator
-      Name		      "Integrator1"
-      SID		      "2"
-      Ports		      [1, 1]
-      Position		      [345, 75, 375, 105]
-      ZOrder		      2
-      InitialCondition	      "initialConditions(1)"
-      AbsoluteTolerance	      "1e-6"
-    }
-    Block {
-      BlockType		      Integrator
-      Name		      "Integrator2"
-      SID		      "3"
-      Ports		      [1, 1]
-      Position		      [215, 425, 245, 455]
-      ZOrder		      3
-      InitialCondition	      "initialConditions(4)"
-      AbsoluteTolerance	      "1e-6"
-      Port {
-	PortNumber		1
-	Name			"y_dot"
-	RTWStorageClass		"Auto"
-	DataLoggingNameMode	"SignalName"
-      }
-    }
-    Block {
-      BlockType		      Integrator
-      Name		      "Integrator3"
-      SID		      "4"
-      Ports		      [1, 1]
-      Position		      [345, 425, 375, 455]
-      ZOrder		      4
-      InitialCondition	      "initialConditions(3)"
-      AbsoluteTolerance	      "1e-6"
-    }
-    Block {
       BlockType		      Sum
       Name		      "Moon_x\nEarth mass"
       SID		      "8"
       Ports		      [2, 1]
-      Position		      [700, 212, 730, 243]
+      Position		      [700, 377, 730, 408]
       ZOrder		      8
       BlockMirror	      on
       InputSameDT	      off
@@ -1214,7 +1202,7 @@ Model {
       Name		      "Product"
       SID		      "17"
       Ports		      [2, 1]
-      Position		      [340, 527, 370, 558]
+      Position		      [340, 692, 370, 723]
       ZOrder		      17
       BlockMirror	      on
       InputSameDT	      off
@@ -1227,7 +1215,7 @@ Model {
       Name		      "Product1"
       SID		      "20"
       Ports		      [2, 1]
-      Position		      [860, 47, 890, 78]
+      Position		      [860, 212, 890, 243]
       ZOrder		      20
       BlockMirror	      on
       InputSameDT	      off
@@ -1240,7 +1228,7 @@ Model {
       Name		      "Product2"
       SID		      "21"
       Ports		      [2, 1]
-      Position		      [860, 102, 890, 133]
+      Position		      [860, 267, 890, 298]
       ZOrder		      21
       BlockMirror	      on
       InputSameDT	      off
@@ -1253,7 +1241,7 @@ Model {
       Name		      "Product3"
       SID		      "26"
       Ports		      [2, 1]
-      Position		      [900, 517, 930, 548]
+      Position		      [900, 682, 930, 713]
       ZOrder		      26
       BlockMirror	      on
       InputSameDT	      off
@@ -1266,7 +1254,7 @@ Model {
       Name		      "Product4"
       SID		      "27"
       Ports		      [2, 1]
-      Position		      [900, 572, 930, 603]
+      Position		      [900, 737, 930, 768]
       ZOrder		      27
       BlockMirror	      on
       InputSameDT	      off
@@ -1279,7 +1267,7 @@ Model {
       Name		      "Product5"
       SID		      "31"
       Ports		      [2, 1]
-      Position		      [250, 232, 280, 263]
+      Position		      [250, 397, 280, 428]
       ZOrder		      31
       BlockMirror	      on
       InputSameDT	      off
@@ -1292,7 +1280,7 @@ Model {
       Name		      "Product6"
       SID		      "34"
       Ports		      [2, 1]
-      Position		      [345, 137, 375, 168]
+      Position		      [345, 302, 375, 333]
       ZOrder		      34
       BlockMirror	      on
       InputSameDT	      off
@@ -1305,7 +1293,7 @@ Model {
       Name		      "Product7"
       SID		      "35"
       Ports		      [2, 1]
-      Position		      [345, 192, 375, 223]
+      Position		      [345, 357, 375, 388]
       ZOrder		      35
       BlockMirror	      on
       InputSameDT	      off
@@ -1317,7 +1305,7 @@ Model {
       BlockType		      Sqrt
       Name		      "Sqrt"
       SID		      "18"
-      Position		      [725, 75, 755, 105]
+      Position		      [725, 240, 755, 270]
       ZOrder		      18
       BlockMirror	      on
       Port {
@@ -1331,7 +1319,7 @@ Model {
       BlockType		      Sqrt
       Name		      "Sqrt1"
       SID		      "28"
-      Position		      [765, 545, 795, 575]
+      Position		      [765, 710, 795, 740]
       ZOrder		      24
       BlockMirror	      on
       Port {
@@ -1346,7 +1334,7 @@ Model {
       Name		      "To Workspace"
       SID		      "38"
       Ports		      [1]
-      Position		      [560, 35, 620, 65]
+      Position		      [550, 200, 610, 230]
       ZOrder		      38
       VariableName	      "simout"
       MaxDataPoints	      "inf"
@@ -1356,20 +1344,208 @@ Model {
       SampleTime	      "-1"
     }
     Block {
+      BlockType		      Integrator
+      Name		      "dx"
+      SID		      "1"
+      Ports		      [1, 1]
+      Position		      [215, 240, 245, 270]
+      ZOrder		      1
+      InitialCondition	      "initialConditions(2)"
+      AbsoluteTolerance	      "1e-6"
+      Port {
+	PortNumber		1
+	Name			"x_dot"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "dx-dy scope"
+      SID		      "73"
+      Ports		      [1]
+      Position		      [565, 68, 595, 102]
+      ZOrder		      61
+      Floating		      off
+      Location		      [201, 480, 1188, 1193]
+      Open		      off
+      NumInputPorts	      "1"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      List {
+	ListType		ScopeGraphics
+	FigureColor		"[0.501960784313725 0.501960784313725 0.501960784313725]"
+	AxesColor		"[0 0 0]"
+	AxesTickColor		"[1 1 1]"
+	LineColors		"[1 1 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]"
+	LineStyles		"-|-|-|-|-|-"
+	LineWidths		"[0.5 0.5 0.5 0.5 0.5 0.5]"
+	MarkerStyles		"none|none|none|none|none|none"
+      }
+      ShowLegends	      on
+      LegendLocations	      "0.87298     0.92076    0.067338    0.031557"
+      TimeRange		      "23"
+      SaveName		      "ScopeData1"
+      LimitDataPoints	      off
+      ScrollMode	      off
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "dx-dy scope1"
+      SID		      "75"
+      Ports		      [2]
+      Position		      [650, 95, 680, 130]
+      ZOrder		      63
+      Floating		      off
+      Location		      [188, 365, 1175, 1078]
+      Open		      off
+      NumInputPorts	      "2"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+	axes2			"%<SignalLabel>"
+      }
+      List {
+	ListType		ScopeGraphics
+	FigureColor		"[0.501960784313725 0.501960784313725 0.501960784313725]"
+	AxesColor		"[0 0 0]"
+	AxesTickColor		"[1 1 1]"
+	LineColors		"[1 1 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]"
+	LineStyles		"-|-|-|-|-|-"
+	LineWidths		"[0.5 0.5 0.5 0.5 0.5 0.5]"
+	MarkerStyles		"none|none|none|none|none|none"
+      }
+      ShowLegends	      on
+      LegendLocations	      " 0.8972     0.92076    0.067338    0.031557\n0.91692      0.4467    0.047619    0.031557"
+      TimeRange		      "23"
+      YMin		      "-5~-5"
+      YMax		      "5~5"
+      SaveName		      "ScopeData2"
+      LimitDataPoints	      off
+      ScrollMode	      off
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "dx-dy scope2"
+      SID		      "76"
+      Ports		      [1]
+      Position		      [650, 22, 680, 58]
+      ZOrder		      64
+      Floating		      off
+      Location		      [188, 365, 1175, 1078]
+      Open		      off
+      NumInputPorts	      "1"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      List {
+	ListType		ScopeGraphics
+	FigureColor		"[0.501960784313725 0.501960784313725 0.501960784313725]"
+	AxesColor		"[0 0 0]"
+	AxesTickColor		"[1 1 1]"
+	LineColors		"[1 1 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]"
+	LineStyles		"-|-|-|-|-|-"
+	LineWidths		"[0.5 0.5 0.5 0.5 0.5 0.5]"
+	MarkerStyles		"none|none|none|none|none|none"
+      }
+      ShowLegends	      on
+      LegendLocations	      "0.8972     0.89411    0.067338    0.058205"
+      TimeRange		      "23"
+      SaveName		      "ScopeData3"
+      LimitDataPoints	      off
+      ScrollMode	      off
+    }
+    Block {
+      BlockType		      Integrator
+      Name		      "dy"
+      SID		      "3"
+      Ports		      [1, 1]
+      Position		      [215, 590, 245, 620]
+      ZOrder		      3
+      InitialCondition	      "initialConditions(4)"
+      AbsoluteTolerance	      "1e-6"
+      Port {
+	PortNumber		1
+	Name			"y_dot"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+    }
+    Block {
       BlockType		      Constant
       Name		      "mu"
       SID		      "5"
-      Position		      [820, 295, 850, 325]
+      Position		      [820, 460, 850, 490]
       ZOrder		      5
       BlockMirror	      on
       Value		      "mu"
     }
+    Block {
+      BlockType		      Integrator
+      Name		      "x"
+      SID		      "2"
+      Ports		      [1, 1]
+      Position		      [345, 240, 375, 270]
+      ZOrder		      2
+      InitialCondition	      "initialConditions(1)"
+      AbsoluteTolerance	      "1e-6"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "x-y scope"
+      SID		      "72"
+      Ports		      [1]
+      Position		      [565, 128, 595, 162]
+      ZOrder		      60
+      Floating		      off
+      Location		      [517, 111, 1504, 824]
+      Open		      off
+      NumInputPorts	      "1"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      List {
+	ListType		ScopeGraphics
+	FigureColor		"[0.5 0.5 0.5]"
+	AxesColor		"[0 0 0]"
+	AxesTickColor		"[1 1 1]"
+	LineColors		"[1 1 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]"
+	LineStyles		"-|-|-|-|-|-"
+	LineWidths		"[0.5 0.5 0.5 0.5 0.5 0.5]"
+	MarkerStyles		"none|none|none|none|none|none"
+      }
+      ShowLegends	      on
+      LegendLocations	      "0.87298     0.92076    0.047619    0.031557"
+      TimeRange		      "23"
+      LimitDataPoints	      off
+      ScrollMode	      off
+    }
+    Block {
+      BlockType		      Integrator
+      Name		      "y\n"
+      SID		      "4"
+      Ports		      [1, 1]
+      Position		      [345, 590, 375, 620]
+      ZOrder		      4
+      InitialCondition	      "initialConditions(3)"
+      AbsoluteTolerance	      "1e-6"
+    }
     Line {
       Name		      "x_dot"
       ZOrder		      1
-      SrcBlock		      "Integrator"
+      SrcBlock		      "dx"
       SrcPort		      1
       Points		      [27, 0]
+      Branch {
+	ZOrder			301
+	Points			[0, -100]
+	DstBlock		"Bus\nCreator1"
+	DstPort			1
+      }
       Branch {
 	ZOrder			145
 	Points			[0, 53; -110, 0; 0, 237]
@@ -1379,26 +1555,35 @@ Model {
       Branch {
 	ZOrder			143
 	Labels			[-1, 0]
-	DstBlock		"Integrator1"
+	DstBlock		"x"
 	DstPort			1
       }
     }
     Line {
       Name		      "y_dot"
       ZOrder		      2
-      SrcBlock		      "Integrator2"
+      SrcBlock		      "dy"
       SrcPort		      1
       Points		      [17, 0]
       Branch {
 	ZOrder			94
 	Points			[0, -48; 37, 0; 0, -97]
-	DstBlock		"Gain1"
-	DstPort			1
+	Branch {
+	  ZOrder		  303
+	  Points		  [0, -285]
+	  DstBlock		  "Bus\nCreator1"
+	  DstPort		  2
+	}
+	Branch {
+	  ZOrder		  302
+	  DstBlock		  "Gain1"
+	  DstPort		  1
+	}
       }
       Branch {
 	ZOrder			93
 	Labels			[1, 1]
-	DstBlock		"Integrator3"
+	DstBlock		"y\n"
 	DstPort			1
       }
     }
@@ -1536,7 +1721,7 @@ Model {
     }
     Line {
       ZOrder		      31
-      SrcBlock		      "Integrator3"
+      SrcBlock		      "y\n"
       SrcPort		      1
       Points		      [20, 0]
       Branch {
@@ -1619,7 +1804,7 @@ Model {
       ZOrder		      34
       SrcBlock		      "Add"
       SrcPort		      1
-      DstBlock		      "Integrator2"
+      DstBlock		      "dy"
       DstPort		      1
     }
     Line {
@@ -1703,7 +1888,7 @@ Model {
     }
     Line {
       ZOrder		      50
-      SrcBlock		      "Integrator1"
+      SrcBlock		      "x"
       SrcPort		      1
       Points		      [52, 0]
       Branch {
@@ -1819,7 +2004,7 @@ Model {
       SrcBlock		      "Add6"
       SrcPort		      1
       Points		      [-12, 0; 0, -160]
-      DstBlock		      "Integrator"
+      DstBlock		      "dx"
       DstPort		      1
     }
     Line {
@@ -1865,7 +2050,70 @@ Model {
       ZOrder		      118
       SrcBlock		      "Bus\nCreator"
       SrcPort		      1
-      DstBlock		      "To Workspace"
+      Points		      [22, 0]
+      Branch {
+	ZOrder			308
+	DstBlock		"To Workspace"
+	DstPort			1
+      }
+      Branch {
+	ZOrder			290
+	Points			[0, -70; 18, 0]
+	Branch {
+	  ZOrder		  320
+	  Points		  [0, -95]
+	  DstBlock		  "Bus\nCreator2"
+	  DstPort		  2
+	}
+	Branch {
+	  ZOrder		  319
+	  Points		  [20, 0]
+	  Branch {
+	    ZOrder		    316
+	    Points		    [0, 33; 75, 0; 0, -58]
+	    DstBlock		    "dx-dy scope1"
+	    DstPort		    2
+	  }
+	  Branch {
+	    ZOrder		    315
+	    DstBlock		    "x-y scope"
+	    DstPort		    1
+	  }
+	}
+      }
+    }
+    Line {
+      ZOrder		      299
+      SrcBlock		      "Bus\nCreator1"
+      SrcPort		      1
+      Points		      [8, 0; 0, -80; 19, 0]
+      Branch {
+	ZOrder			322
+	Points			[0, -55]
+	DstBlock		"Bus\nCreator2"
+	DstPort			1
+      }
+      Branch {
+	ZOrder			321
+	Points			[30, 0]
+	Branch {
+	  ZOrder		  314
+	  Points		  [0, 35; 64, 0; 0, -15]
+	  DstBlock		  "dx-dy scope1"
+	  DstPort		  1
+	}
+	Branch {
+	  ZOrder		  313
+	  DstBlock		  "dx-dy scope"
+	  DstPort		  1
+	}
+      }
+    }
+    Line {
+      ZOrder		      318
+      SrcBlock		      "Bus\nCreator2"
+      SrcPort		      1
+      DstBlock		      "dx-dy scope2"
       DstPort		      1
     }
   }
