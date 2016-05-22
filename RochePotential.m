@@ -21,8 +21,13 @@ Lx = [0.83629259089993, 1.15616816590553, -1.00511551160689, 0.487722529, 0.4877
 Ly = [0, 0, 0, 0.86602540378444, -0.86602540378444]; 
 LScaling = [5,5,5,5,5];
 
-fig2 = figure(2); hold on; grid on; grid minor;
-contourf(h_x,h_y,U,70);
+fig2 = figure(2);
+subplot(2,2,[1 3]); hold on; grid on; grid minor;
+mesh(h_x,h_y,U);
+subplot(2,2,2); hold on; grid on; grid minor;
+mesh(h_x,h_y,U);
+subplot(2,2,4); hold on; grid on; grid minor;
+contourf(h_x,h_y,U,120);
 scatter(Lx,Ly,LScaling,...
     'LineWidth', 0.6, 'MarkerEdgeColor', 'r',...
     'MarkerFaceColor', 'r');
