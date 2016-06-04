@@ -1,0 +1,64 @@
+function computeJacobiCFromRAT()
+    Earth_mass = 5.9722;% * 10^24;
+    Moon_mass = 0.0123 * Earth_mass;
+    M = Earth_mass + Moon_mass;
+    mu = Moon_mass / M;
+
+    Earth_pos = [-mu;0];
+    Moon_pos = [1-mu;0];
+
+    computeJacobi_C = @(x,y,vx,vy) computeJacobiConstant_vec(x,y,vx,vy,mu,Earth_pos,Moon_pos);
+
+    theta = 0:0.01:2*pi;
+    alpha = 0:0.01:2*pi;
+    r = 0.005:0.0005:0.11;
+    [R,T,A] = meshgrid(r, theta, alpha);
+    
+    C_L2_border = 3.173
+    ;
+    
+    x = Earth_pos(1) + R .* cos(T);
+    y = R .* sin(T);
+    v = sqrt(R.^2 + 2./R + 2*sqrt(2*R).*sin(A));
+    C = computeJacobi_C(x,y,v,0);
+    %C(C <= C_L2_border) = 0;
+    %C(C > C_L2_border) = 1;
+    
+    fig1 = figure('Position',[5 -21 1036 1104]);
+    subplot(2,2,1); hold on; grid on; grid minor; view([-40 26]); axis square;
+    pcolor3(R,T,A,C,'edgealpha',.3,'alpha',0.025);
+    colorbar('eastoutside');
+    xlabel('Radius','FontSize',14);
+    ylabel('Theta','FontSize',14);
+    zlabel('Alpha','FontSize',14);
+    axis([0.005 0.11 0 2*pi 0 2*pi]);
+    title('C(r,t,a)','FontSize',14);
+    
+    subplot(2,2,2); hold on; grid on; grid minor; view([0 0]); axis square;
+    pcolor3(R,T,A,C,'edgealpha',.05,'alpha',0.025);
+    colorbar('eastoutside');
+    xlabel('Radius','FontSize',14);
+    ylabel('Theta','FontSize',14);
+    zlabel('Alpha','FontSize',14);
+	axis([0.005 0.11 0 2*pi 0 2*pi]);
+    title('C(r,t,a)','FontSize',14);
+    
+    subplot(2,2,3); hold on; grid on; grid minor; view([90 0]); axis square;
+    pcolor3(R,T,A,C,'edgealpha',.3,'alpha',0.025);
+    colorbar('eastoutside');
+    xlabel('Radius','FontSize',14);
+    ylabel('Theta','FontSize',14);
+    zlabel('Alpha','FontSize',14);
+	axis([0.005 0.11 0 2*pi 0 2*pi]);
+    title('C(r,t,a)','FontSize',14);
+    
+    subplot(2,2,4); hold on; grid on; grid minor; view([0 90]); axis square;
+    pcolor3(R,T,A,C,'edgealpha',.3,'alpha',0.025);
+    colorbar('eastoutside');
+    xlabel('Radius','FontSize',14);
+    ylabel('Theta','FontSize',14);
+    zlabel('Alpha','FontSize',14);
+	axis([0.005 0.11 0 2*pi 0 2*pi]);
+    title('C(r,t,a)','FontSize',14);
+    
+end
