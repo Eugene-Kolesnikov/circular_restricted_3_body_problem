@@ -4,6 +4,8 @@ Earth_mass = 5.9722;% * 10^24;
 Moon_mass = 0.0123 * Earth_mass;
 M = Earth_mass + Moon_mass;
 mu = Moon_mass / M;
+%mu = 0;
+stopRadius = Inf;
 
 Earth_pos = [-mu;0];
 Moon_pos = [1-mu;0];
@@ -11,10 +13,10 @@ Moon_pos = [1-mu;0];
 computeJacobi_C = @(IC) computeJacobiConstant(IC,mu,Earth_pos,Moon_pos);
 computeJacobi_v2 = @(x,y,C) computeJacobiVelocity(x,y,mu,Earth_pos,Moon_pos,C);
 
-x0 = 1.15616816590553; y0 = 0;
-v = sqrt(computeJacobi_v2(x0,y0,3.13)/2);
-initialConditions = [x0, v, y0, v]; timeInterval = [0 135];
-%initialConditions = [0.3011, -0.8496, 0.0773,  1.5496]; timeInterval = [0 12];
+%x0 = 0.5; y0 = 0;
+%[vx, vy] = computeV_rot(x0,y0);
+%initialConditions = [x0, vx, y0, vy]; timeInterval = [0 35];
+initialConditions = [0.3011, -0.8496, 0.0773,  1.5496]; timeInterval = [0 12];
 %initialConditions = [0.3011, 0.995*-0.8496, 0.0773,  0.995*1.5496]; timeInterval = [0 32];
 C = computeJacobi_C(initialConditions);
 
@@ -83,9 +85,9 @@ axis_ = axis();
 Oxy = 1.01*max( abs(axis_(1)), max( abs(axis_(2)), max(abs(axis_(3)),abs(axis_(4))) ) );
 axis([-Oxy Oxy -Oxy Oxy]);
 
-% plot initial velocity
-p1 = [initialConditions(1), initialConditions(3)];
-dp = [initialConditions(2), initialConditions(4)];
+%plot initial velocity
+%p1 = [initialConditions(1), initialConditions(3)];
+%dp = [initialConditions(2), initialConditions(4)];
 %quiver(p1(1),p1(2),dp(1),dp(2),0,'Color','black');
 % plot initial position
 %scatter(p1(1),p1(2), 'MarkerEdgeColor', 'r',...
