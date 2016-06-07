@@ -17,8 +17,9 @@ Lx = [0.83629259089993, 1.15616816590553, -1.00511551160689, 0.487722529, 0.4877
 Ly = [0, 0, 0, 0.86602540378444, -0.86602540378444]; 
 LScaling = [5,5,5,5,5];
 
-    stopRadius = 3;
-    closeRadius = 0.01657;
+    stopRadius = 5;
+    closeRadius = 0.00857;
+    closeRadius1 = 0.01657;
     
     %dr = 0.03;
     %dt = pi/4;
@@ -26,14 +27,14 @@ LScaling = [5,5,5,5,5];
     %r = 0.01:dr:0.11;
     %t = 0:dt:(2*pi-0.001);
     %a = 0:da:(2*pi-0.001);
-    N = 5;
+    N = 10;
     r = linspace(0.017,0.2,N);
     t = linspace(0,2*pi,N);
     a = linspace(0,2*pi,N);
     
     [R,T,A] = meshgrid(r, t, a);
     isEscapeVelocity = zeros(size(A));
-    figure; hold on;
+    %figure; hold on;
     for ri = 1:length(r)
         for ti = 1:length(t)
             for ai = 1:length(a)
@@ -41,7 +42,7 @@ LScaling = [5,5,5,5,5];
                 y = r(ri) * sin(t(ti));
                 v = sqrt(r(ri)^2+2/r(ri)+2*sqrt(2*r(ri))*sin(a(ai)));
                 b = acos(sqrt(2/r(ri))/v*cos(a(ai)));
-                v = 1 * v;
+                v = 1.2 * v;
                 dx = v * cos(t(ti)+b); dy = v * sin(t(ti)+b);
                 initialConditions = [x, dx, y, dy]; timeInterval = [0 100.0];
                 trajectoryModel_result = sim('trajectoryModel','SimulationMode','normal');
@@ -60,21 +61,21 @@ LScaling = [5,5,5,5,5];
                     %title(['h = ' num2str(h)]);
                     if h >= 0
                         isEscapeVelocity(ri,ti,ai) = -1;
-                        plot(trajectoryModel_out.signal2.signal1.Data,trajectoryModel_out.signal2.signal2.Data, 'Color', 'blue');
+                        %plot(trajectoryModel_out.signal2.signal1.Data,trajectoryModel_out.signal2.signal2.Data, 'Color', 'blue');
                     else
                         isEscapeVelocity(ri,ti,ai) = 0;
                         %figure; hold on; grid on; grid minor;
-                        plot(trajectoryModel_out.signal2.signal1.Data,trajectoryModel_out.signal2.signal2.Data, 'Color', 'green');
+                        %plot(trajectoryModel_out.signal2.signal1.Data,trajectoryModel_out.signal2.signal2.Data, 'Color', 'green');
                         
                     end
                 else
-                    if closest <= closeRadius
+                    if closest <= closeRadius1
                         isEscapeVelocity(ri,ti,ai) = 1;
                         %plot(trajectoryModel_out.signal2.signal1.Data,trajectoryModel_out.signal2.signal2.Data, 'Color', 'red');
                     else
                         isEscapeVelocity(ri,ti,ai) = 0;
                         %figure; hold on; grid on; grid minor;
-                        plot(trajectoryModel_out.signal2.signal1.Data,trajectoryModel_out.signal2.signal2.Data, 'Color', 'green');
+                        %plot(trajectoryModel_out.signal2.signal1.Data,trajectoryModel_out.signal2.signal2.Data, 'Color', 'green');
                         
                     end
                 end
